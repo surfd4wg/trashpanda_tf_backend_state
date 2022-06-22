@@ -39,7 +39,7 @@ cd Step1_backend_tf_files_are_here
 3. run invoke_tf.py
 
 ```bash
-python invoke_tf.py --action apply --client test --profile default --region us-east-1 -n "<your unique key name>/terraform.tfstate"
+python invoke_tf.py -a apply -c test -p default -r us-east-1 -n "<your unique key name>/terraform.tfstate"
 ```
 
 4. cd to the main terraform deployment directory
