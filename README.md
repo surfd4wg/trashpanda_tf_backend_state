@@ -30,7 +30,6 @@ https://github.com/surfd4wg/trashpanda_tf_backend_state.git
 2. navigate to the src directory, then the Step1_backend_tf_files_are_here
 
 ```bash
-cd src
 cd Step1_backend_tf_files_are_here
 ```
 
