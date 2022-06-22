@@ -2,7 +2,7 @@
 
 ## Description
 
-## Creating and using the terraform backend stored in S3 and DynamoDB
+## ===== Creating and using the terraform backend stored in S3 and DynamoDB =====
 
 Creates AWS infrastrure for managing terraform state
 
@@ -97,7 +97,7 @@ terraform apply -auto-approve
 etc.
 ```
 
-## Destroying your terraform deployment -AND- destroying the terraform backend stored in S3 and DynamoDB
+## ===== Destroying your terraform deployment -AND- destroying the terraform backend stored in S3 and DynamoDB =====
 1. cd to the Step2_main_tf_files_go_here
 ```bash
 cd Step2_main_tf_files_go_here
