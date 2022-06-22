@@ -53,11 +53,12 @@ Note: create your new terraform deployment in this Step2 directory, or copy your
 cat ../Step1_backend_tf_files_are_here/s3.<region>.tfbackend
 
 example output:
-        bucket          = "krispycreme-us-west-2-tf-state"
-        dynamodb_table  = "krispycreme-us-west-2-tf-state"
-        region          = "us-west-2"
-        key             = "state/terraform.state"
-        encrypt         = "true"
+        bucket="trashpanda-us-west-2-tf-state"
+        dynamodb_table="trashpanda-us-west-2-tf-state"
+        region="us-west-2"
+        key = "trashpanda/terraform.tfstate"
+        encrypt="true"
+
 ```
 
 6. using the output in the previous command, create a new provider.tf file, and place that content in the backend "s3 {} section
@@ -71,11 +72,11 @@ terraform {
   }
 
   backend "s3" {
-        bucket          = "krispycreme-us-west-2-tf-state"
-        dynamodb_table  = "krispycreme-us-west-2-tf-state"
-        region          = "us-west-2"
-        key             = "state/terraform.state"
-        encrypt         = "true"
+        bucket="trashpanda-us-west-2-tf-state"
+        dynamodb_table="trashpanda-us-west-2-tf-state"
+        region="us-west-2"
+        key = "trashpanda/terraform.tfstate"
+        encrypt="true"
         }
 }
 
