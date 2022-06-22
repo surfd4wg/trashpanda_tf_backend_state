@@ -79,11 +79,12 @@ terraform {
 provider "aws" {
 }
 ```
-save the file and exit
+
 7. terraform init with the newly created backend file
 ```
 terraform init -backend-config="../Step1_backend_tf_files_are_here/s3.<region>.tfbackend"
 ```
+
 8. continue adding your additional terraform deployment files to the current directory (not the one used to create the backend). Followed by:
 ```
 terraform init -backend-config="../Step1_backend_tf_files_are_here/s3.<region>.tfbackend"
@@ -91,6 +92,7 @@ terraform plan
 terraform apply -auto-approve
 etc.
 ```
+
 ## Destroying your terraform deployment -AND- destroying the terraform backend stored in S3 and DynamoDB
 1. cd to the Step2_main_tf_files_go_here
 ```bash
