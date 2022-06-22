@@ -1,7 +1,8 @@
 # trashpanda_tf_backend_state
-# klm_s3_tf_backend
 
 ## Description
+
+## Creating and using the terraform backend stored in S3 and DynamoDB
 
 Creates AWS infrastrure for managing terraform state
 
@@ -90,7 +91,26 @@ terraform plan
 terraform apply -auto-approve
 etc.
 ```
-### invoke_tf.py
+## Destroying your terraform deployment -AND- destroying the terraform backend stored in S3 and DynamoDB
+1. cd to the Step2_main_tf_files_go_here
+```bash
+cd Step2_main_tf_files_go_here
+```
+2. initiate a terraform destroy
+```
+terraform destroy -auto-approve
+```
+3. cd to the Step1_backend_tf_files_are_here
+```
+cd ../Step1_backend_tf_files_are_here
+```
+4. initiate a destroy on the s3 bucket and DynamoDB table
+```
+python invoke_tf.py -a destroy -c test -p default -r us-west-2 -n "<your unique key name>/terraform.tfstate"
+```
+
+
+## invoke_tf.py
 
 invoke_tf.py is a python script with logic to manage executing terraform to create the backend infrastructure and manage its state. Imports class from python files in the py_modules directory
 
@@ -102,6 +122,7 @@ arguments
 | client | -c | owner for the terraform created resources |
 | profile | -p | aws credential profile name |
 | region | -r | aws account region |
+| key | -n unique key name for your state file |
 
 Todo:
 
