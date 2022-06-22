@@ -17,8 +17,11 @@ resources created
 ### Getting started
 Pre-Reqs:
 ```bash
-export AWS_PROFILE=your profile
-export AWS_REGION=your region
+export AWS_PROFILE=<your profile>
+export AWS_REGION=<your region>
+export AWS_DEFAULT_REGION=<your region>
+export AWS_ACCESS_KEY_ID=<your aws access key>
+export AWS_SECRET_ACCESS_KEY=<your aws secret access key>
 ```
 
 1. clone this repo
